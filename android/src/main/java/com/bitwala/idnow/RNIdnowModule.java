@@ -40,7 +40,9 @@ public class RNIdnowModule extends ReactContextBaseJavaModule {
                     break;
 
                 default:
+                 if(idnowPromise != null){
                     idnowPromise.reject("INTERNAL_ERROR", "Internal error: " + resultCode);
+                     }
             }
         }
     };
